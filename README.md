@@ -24,7 +24,7 @@ Birden fazla model aynı gruptayken birbirlerini nasıl etkiler?
 | **B: Karma grup** | Sabit ajanlardan sonra üç model sırayla cevaplar ve birbirini görür |
 
 - **Modeller:** `deepseek-v4.1-flash`, `qwen3.8-flash-next`, `gemma-4-31b`
-  ([EVREN](https://evren-llmapi.ssyz.org.tr) platformu üzerinden, düşünme kapalı)
+  (Savunma Sanayii Başkanlığı'nın EVREN platformu üzerinden, düşünme kapalı)
 - **Sorular:** 60 soru: 20 sembolik çizgi, 20 bilgi, 20 aritmetik; her birinde 4 şık
 - **Değişkenler:** Suç ortağı sayısı, hata büyüklüğü, dil (Türkçe/İngilizce), cevabın görünürlüğü
 - **Hacim:** ~28.500 API çağrısı
