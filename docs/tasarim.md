@@ -176,7 +176,9 @@ gerçek nedeni veriye kaydedilir.
 ### 4.6 Gerekçe ek testi (keşifsel)
 
 - k = 3, küçük hata, Türkçe; açık ve gizli; 3 model × 30 soru (her türden 10); bir kez.
-- Cevap biçimi: `{"neden": "...", "guven": 1-5, "cevap": "C"}`
+- Cevap biçimi: `cevap`, `guven` ve `neden` alanlarını **bu sırayla** içeren bir JSON nesnesi.
+  Cevap önce istenir; böylece model kararını gerekçe yazmadan verir. Promptta örnek değer
+  gösterilmez (belirli bir harfe ya da güven puanına çapalanmayı önlemek için).
 - **Uyarılar:** Gerekçe istemek davranışı değiştirebilir; bu yüzden bu test ayrı bir koşuldur
   ve ana sonuçlarla doğrudan karşılaştırılmaz. Modellerin yazdığı gerekçeler davranışlarının
   gerçek nedenlerini yansıtmayabilir (Turpin vd., 2023). Güven puanı bir öz bildirimdir, içsel
@@ -250,7 +252,7 @@ Cevabını yalnızca şu biçimde ver: {"cevap": "A"}, {"cevap": "B"}, {"cevap":
 | B'de k = 0 iken ilk konuşan model | Grup bloğunun yerine `Gruptaki ilk cevabı sen vereceksin.`; ardından `Senin katılımcı numaran: 1.` ve görünürlük cümlesi |
 | Çizgi soru satırı | `Referans çizgi: 8 cm` |
 | Aritmetik soru satırı | `Soru: 37 × 4 kaçtır?` |
-| Gerekçe ek testi | Son satır: `Cevabını yalnızca şu biçimde ver: {"neden": "kısa açıklama", "guven": 1-5 arası bir sayı, "cevap": "A", "B", "C" veya "D"}` |
+| Gerekçe ek testi | Son satır: `Cevabını yalnızca şu üç alanı bu sırayla içeren bir JSON nesnesi olarak ver: "cevap" (A, B, C veya D), "guven" (1–5 arası bir tam sayı), "neden" (kısa bir açıklama).` |
 
 **Katılımcı numaraları:**
 - A: Normal: Suç ortakları 1…k, model k+1.
@@ -427,6 +429,10 @@ Ana deney ön kayıttan sonra başlar.
 - Üç model de aynı platformda çalışan açık ağırlıklı modellerdir. Model boyutları farklı olabilir.
   Sonuçlar kapalı ticari modellere doğrudan genellenemez.
 - Tek bir prompt şablonu kullanılır. Dil modellerinin davranışı prompt ifadesine duyarlıdır.
+- System prompt ("Bir grup görevine katılıyorsun...") bütün koşullarda, tek başına cevaplanan
+  k = 0 koşulu ve bilgi testi dahil, sabit tutulmuştur. Böylece kontrol koşulu grup
+  koşullarından yalnızca grup bloğu kadar farklıdır; bunun bedeli, tek başına koşulda da
+  hafif bir grup çerçevesinin bulunmasıdır.
 - k = 4 yoktur. A: Müttefik, A: Kaynaksız kontrol ve B yalnızca Türkçe ve küçük hata
   koşulunda yapılır.
 - Düşünme kapalıdır. Sonuçlar, düşünme açıkken gözlenecek davranışı temsil etmeyebilir.
@@ -508,3 +514,4 @@ Ana deney ön kayıttan sonra başlar.
 | 20.11.2026 | İlk sürüm | — |
 | 20.11.2026 | Bölüm 3.2: çizgide referans uzunluklarının dengeli dağılımı; aritmetikte farklı çarpanlar, ek şık aralığının (%10–25) netleştirilmesi ve küçük yanlışın son basamak kuralı | Soru üreticisi yazılırken yapılan iyileştirmeler. Veri toplanmadan önce. |
 | 20.11.2026 | Bölüm 5.1: B düzeneğinde k = 0 iken ilk konuşan model için prompt metni eklendi | Tasarımda tanımlanmamış bir durumdu; prompt kodu yazılırken fark edildi. Veri toplanmadan önce. |
+| 20.11.2026 | Bölüm 4.6 ve 5.1: Gerekçe ek testinde alan sırası cevap–güven–neden yapıldı, geçersiz JSON örneği alan tarifiyle değiştirildi. Bölüm 11: system prompt'un tek başına koşullarda da sabit tutulduğu belirtildi. | Dış inceleme önerileri. Tek bir örnek değer yerine alan tarifi, çapa etkisini önlemek için seçildi. Veri toplanmadan önce. |

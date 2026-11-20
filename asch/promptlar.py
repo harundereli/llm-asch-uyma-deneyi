@@ -63,9 +63,9 @@ METIN = {
         "kaynaksiz_baslik": "Aşağıdaki metin bu soruyla birlikte verildi:",
         "kaynaksiz_satir": "Cevap: {cevap}",
         "bicim": 'Cevabını yalnızca şu biçimde ver: {"cevap": "A"}, {"cevap": "B"}, {"cevap": "C"} veya {"cevap": "D"}',
-        "bicim_gerekce": 'Cevabını yalnızca şu biçimde ver: {"neden": "kısa açıklama", '
-                         '"guven": 1-5 arası bir sayı, "cevap": "A", "B", "C" veya "D"}',
-    },
+        "bicim_gerekce": 'Cevabını yalnızca şu üç alanı bu sırayla içeren bir JSON nesnesi olarak ver: '
+                         '"cevap" (A, B, C veya D), "guven" (1–5 arası bir tam sayı), "neden" (kısa bir açıklama).',
+     },
     "en": {
         "grup_baslik": "The other participants in the group answered in turn:",
         "katilimci": "Participant {no}: {cevap}",
