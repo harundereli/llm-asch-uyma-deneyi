@@ -327,7 +327,7 @@ Her koşulda **60 soru × 2 tekrar** (bilgi testi ve gerekçe ek testi hariç).
 
 - **Tahmini token:** ~8,4 milyon. Önbellek indirimi hesaba katılmamıştır.
 - **Sınırlar:** Anahtar başına günlük 10 milyon, hesap başına günlük 15 milyon token
-  (sıfırlanma 00:00 UTC). RPM tavanı 60. Ücretsiz dönem 1 Aralık 2026'da, API anahtarı
+  (sıfırlanma 00:00 UTC). RPM tavanı 200. Ücretsiz dönem 1 Aralık 2026'da, API anahtarı
   30 Kasım 2026'da sona erer.
 - 10 milyon token kesin üst sınırdır. Gerçek tüketim, girdi ve çıktı tokenları ayrı ayrı
   olmak üzere izlenir.
@@ -340,7 +340,12 @@ Her koşulda **60 soru × 2 tekrar** (bilgi testi ve gerekçe ek testi hariç).
 Pilot verisi ana analize **dahil edilmez.**
 
 1. Modellerin `/v1/models` ile doğrulanması
-2. **Kontrol ön testi:** k = 0'da 20 soru, iki dilde
+2. **Kontrol ön testi:** 60 sorunun tamamı, k = 0, temperature 0, iki dilde, üç modelde
+   (360 çağrı). **Karar kuralı:** Herhangi bir model, herhangi bir dilde bir soru türünün
+   %90'ından azını doğru cevaplarsa: aritmetikte işlem türü iki basamaklı + iki basamaklı
+   toplamaya çevrilir; bilgi sorularında yanlış cevaplanan sorular Bölüm 3.2'deki kurallara
+   uyan yeni sorularla değiştirilir. Her iki durumda da sorular yeniden üretilir ve kontrol ön
+   testi tekrarlanır. Çizgi türünde bu durum beklenmez; olursa nedeni incelenip raporlanır.
 3. **Tutarlılık testi:** k = 3'te 10 soru × 5 tekrar. Aynı promptun tekrarlarının gerçekten
    yeni örnekleme ürettiğinin (önbelleğe alınmadığının) kontrolü de bu testle yapılır.
 4. **Teknik kontroller:** JSON uyumu, düşünmenin kapalı olduğu, çağrı başına token, hata ve
@@ -515,3 +520,5 @@ Ana deney ön kayıttan sonra başlar.
 | 20.11.2026 | Bölüm 3.2: çizgide referans uzunluklarının dengeli dağılımı; aritmetikte farklı çarpanlar, ek şık aralığının (%10–25) netleştirilmesi ve küçük yanlışın son basamak kuralı | Soru üreticisi yazılırken yapılan iyileştirmeler. Veri toplanmadan önce. |
 | 20.11.2026 | Bölüm 5.1: B düzeneğinde k = 0 iken ilk konuşan model için prompt metni eklendi | Tasarımda tanımlanmamış bir durumdu; prompt kodu yazılırken fark edildi. Veri toplanmadan önce. |
 | 20.11.2026 | Bölüm 4.6 ve 5.1: Gerekçe ek testinde alan sırası cevap–güven–neden yapıldı, geçersiz JSON örneği alan tarifiyle değiştirildi. Bölüm 11: system prompt'un tek başına koşullarda da sabit tutulduğu belirtildi. | Dış inceleme önerileri. Tek bir örnek değer yerine alan tarifi, çapa etkisini önlemek için seçildi. Veri toplanmadan önce. |
+| 20.11.2026 | Bölüm 8: Pilottaki kontrol ön testi 60 sorunun tamamına genişletildi ve soru türü düzeyinde bir karar kuralı eklendi | Düşünme kapalıyken aritmetik sorularının zor gelme ihtimaline karşı. Veri toplanmadan önce. |
+| 21.11.2026 | Bölüm 7: RPM tavanı 60'tan 200'e çıkarıldı (yeni API anahtarı) | Deney süresini kısaltmak için. Deney tasarımını etkilemez. Veri toplanmadan önce. |
