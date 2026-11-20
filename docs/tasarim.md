@@ -247,6 +247,7 @@ Cevabını yalnızca şu biçimde ver: {"cevap": "A"}, {"cevap": "B"}, {"cevap":
 | k = 0 ve bilgi testi | Grup bloğu ve katılımcı numarası yer almaz; yerine `Bu soruyu tek başına cevaplıyorsun.` |
 | Kaynaksız kontrol | Grup bloğu ve katılımcı numarası yer almaz; yerine `Aşağıdaki metin bu soruyla birlikte verildi:` ve altında k kez `Cevap: D` |
 | B'de okunamayan cevap | `Katılımcı N: (cevap vermedi)` |
+| B'de k = 0 iken ilk konuşan model | Grup bloğunun yerine `Gruptaki ilk cevabı sen vereceksin.`; ardından `Senin katılımcı numaran: 1.` ve görünürlük cümlesi |
 | Çizgi soru satırı | `Referans çizgi: 8 cm` |
 | Aritmetik soru satırı | `Soru: 37 × 4 kaçtır?` |
 | Gerekçe ek testi | Son satır: `Cevabını yalnızca şu biçimde ver: {"neden": "kısa açıklama", "guven": 1-5 arası bir sayı, "cevap": "A", "B", "C" veya "D"}` |
@@ -506,3 +507,4 @@ Ana deney ön kayıttan sonra başlar.
 |---|---|---|
 | 20.11.2026 | İlk sürüm | — |
 | 20.11.2026 | Bölüm 3.2: çizgide referans uzunluklarının dengeli dağılımı; aritmetikte farklı çarpanlar, ek şık aralığının (%10–25) netleştirilmesi ve küçük yanlışın son basamak kuralı | Soru üreticisi yazılırken yapılan iyileştirmeler. Veri toplanmadan önce. |
+| 20.11.2026 | Bölüm 5.1: B düzeneğinde k = 0 iken ilk konuşan model için prompt metni eklendi | Tasarımda tanımlanmamış bir durumdu; prompt kodu yazılırken fark edildi. Veri toplanmadan önce. |
