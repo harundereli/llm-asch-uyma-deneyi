@@ -1,0 +1,2045 @@
+{
+  "tohum": 20261120,
+  "sorular": [
+    {
+      "id": "CZG-01",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 5 cm",
+      "soru_en": "Reference line: 5 cm",
+      "secenekler": {
+        "A": {
+          "tr": "7 cm",
+          "en": "7 cm",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "10 cm",
+          "en": "10 cm",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "5 cm",
+          "en": "5 cm",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "ek": "B",
+        "dogru": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "CZG-02",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 10 cm",
+      "soru_en": "Reference line: 10 cm",
+      "secenekler": {
+        "A": {
+          "tr": "10 cm",
+          "en": "10 cm",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "4 cm",
+          "en": "4 cm",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "7 cm",
+          "en": "7 cm",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "buyuk": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "CZG-03",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 9 cm",
+      "soru_en": "Reference line: 9 cm",
+      "secenekler": {
+        "A": {
+          "tr": "15 cm",
+          "en": "15 cm",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "7 cm",
+          "en": "7 cm",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "14 cm",
+          "en": "14 cm",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "9 cm",
+          "en": "9 cm",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "kucuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "CZG-04",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 12 cm",
+      "soru_en": "Reference line: 12 cm",
+      "secenekler": {
+        "A": {
+          "tr": "14 cm",
+          "en": "14 cm",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "16 cm",
+          "en": "16 cm",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "18 cm",
+          "en": "18 cm",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "12 cm",
+          "en": "12 cm",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "buyuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "CZG-05",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 6 cm",
+      "soru_en": "Reference line: 6 cm",
+      "secenekler": {
+        "A": {
+          "tr": "2 cm",
+          "en": "2 cm",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "6 cm",
+          "en": "6 cm",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "14 cm",
+          "en": "14 cm",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "8 cm",
+          "en": "8 cm",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "dogru": "B",
+        "ek": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "CZG-06",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 14 cm",
+      "soru_en": "Reference line: 14 cm",
+      "secenekler": {
+        "A": {
+          "tr": "14 cm",
+          "en": "14 cm",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "12 cm",
+          "en": "12 cm",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "8 cm",
+          "en": "8 cm",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "ek": "B",
+        "kucuk": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "CZG-07",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 15 cm",
+      "soru_en": "Reference line: 15 cm",
+      "secenekler": {
+        "A": {
+          "tr": "15 cm",
+          "en": "15 cm",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "16 cm",
+          "en": "16 cm",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "9 cm",
+          "en": "9 cm",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "19 cm",
+          "en": "19 cm",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "kucuk": "B",
+        "buyuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "CZG-08",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 8 cm",
+      "soru_en": "Reference line: 8 cm",
+      "secenekler": {
+        "A": {
+          "tr": "1 cm",
+          "en": "1 cm",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "8 cm",
+          "en": "8 cm",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "12 cm",
+          "en": "12 cm",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "6 cm",
+          "en": "6 cm",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "dogru": "B",
+        "buyuk": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "CZG-09",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 7 cm",
+      "soru_en": "Reference line: 7 cm",
+      "secenekler": {
+        "A": {
+          "tr": "15 cm",
+          "en": "15 cm",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "6 cm",
+          "en": "6 cm",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "7 cm",
+          "en": "7 cm",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "2 cm",
+          "en": "2 cm",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "CZG-10",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 11 cm",
+      "soru_en": "Reference line: 11 cm",
+      "secenekler": {
+        "A": {
+          "tr": "19 cm",
+          "en": "19 cm",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "15 cm",
+          "en": "15 cm",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "12 cm",
+          "en": "12 cm",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "buyuk": "B",
+        "dogru": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "CZG-11",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 14 cm",
+      "soru_en": "Reference line: 14 cm",
+      "secenekler": {
+        "A": {
+          "tr": "10 cm",
+          "en": "10 cm",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "14 cm",
+          "en": "14 cm",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "8 cm",
+          "en": "8 cm",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "16 cm",
+          "en": "16 cm",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "dogru": "B",
+        "buyuk": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "CZG-12",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 8 cm",
+      "soru_en": "Reference line: 8 cm",
+      "secenekler": {
+        "A": {
+          "tr": "10 cm",
+          "en": "10 cm",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "2 cm",
+          "en": "2 cm",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "13 cm",
+          "en": "13 cm",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "8 cm",
+          "en": "8 cm",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "ek": "B",
+        "buyuk": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "CZG-13",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 11 cm",
+      "soru_en": "Reference line: 11 cm",
+      "secenekler": {
+        "A": {
+          "tr": "15 cm",
+          "en": "15 cm",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "12 cm",
+          "en": "12 cm",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "8 cm",
+          "en": "8 cm",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "CZG-14",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 9 cm",
+      "soru_en": "Reference line: 9 cm",
+      "secenekler": {
+        "A": {
+          "tr": "17 cm",
+          "en": "17 cm",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "9 cm",
+          "en": "9 cm",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "15 cm",
+          "en": "15 cm",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "CZG-15",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 13 cm",
+      "soru_en": "Reference line: 13 cm",
+      "secenekler": {
+        "A": {
+          "tr": "18 cm",
+          "en": "18 cm",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "17 cm",
+          "en": "17 cm",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "13 cm",
+          "en": "13 cm",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "ek": "B",
+        "kucuk": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "CZG-16",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 12 cm",
+      "soru_en": "Reference line: 12 cm",
+      "secenekler": {
+        "A": {
+          "tr": "12 cm",
+          "en": "12 cm",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "16 cm",
+          "en": "16 cm",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "4 cm",
+          "en": "4 cm",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "buyuk": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "CZG-17",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 5 cm",
+      "soru_en": "Reference line: 5 cm",
+      "secenekler": {
+        "A": {
+          "tr": "5 cm",
+          "en": "5 cm",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "9 cm",
+          "en": "9 cm",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "10 cm",
+          "en": "10 cm",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "4 cm",
+          "en": "4 cm",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "ek": "B",
+        "buyuk": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "CZG-18",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 10 cm",
+      "soru_en": "Reference line: 10 cm",
+      "secenekler": {
+        "A": {
+          "tr": "11 cm",
+          "en": "11 cm",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "10 cm",
+          "en": "10 cm",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "5 cm",
+          "en": "5 cm",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "16 cm",
+          "en": "16 cm",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "dogru": "B",
+        "ek": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "CZG-19",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 7 cm",
+      "soru_en": "Reference line: 7 cm",
+      "secenekler": {
+        "A": {
+          "tr": "12 cm",
+          "en": "12 cm",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "7 cm",
+          "en": "7 cm",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "5 cm",
+          "en": "5 cm",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "2 cm",
+          "en": "2 cm",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "dogru": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "CZG-20",
+      "tur": "cizgi",
+      "soru_tr": "Referans çizgi: 13 cm",
+      "soru_en": "Reference line: 13 cm",
+      "secenekler": {
+        "A": {
+          "tr": "15 cm",
+          "en": "15 cm",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "19 cm",
+          "en": "19 cm",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "18 cm",
+          "en": "18 cm",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "13 cm",
+          "en": "13 cm",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "buyuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "BLG-01",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Japonya'nın başkenti neresidir?",
+      "soru_en": "Question: What is the capital of Japan?",
+      "secenekler": {
+        "A": {
+          "tr": "Lagos",
+          "en": "Lagos",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "Tokyo",
+          "en": "Tokyo",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "Osaka",
+          "en": "Osaka",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "Seul",
+          "en": "Seoul",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "dogru": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "BLG-02",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Avustralya'nın başkenti neresidir?",
+      "soru_en": "Question: What is the capital of Australia?",
+      "secenekler": {
+        "A": {
+          "tr": "Kanberra",
+          "en": "Canberra",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "Kahire",
+          "en": "Cairo",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "Sidney",
+          "en": "Sydney",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "Melbourne",
+          "en": "Melbourne",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "buyuk": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "BLG-03",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Kanada'nın başkenti neresidir?",
+      "soru_en": "Question: What is the capital of Canada?",
+      "secenekler": {
+        "A": {
+          "tr": "Toronto",
+          "en": "Toronto",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "Vancouver",
+          "en": "Vancouver",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "Lima",
+          "en": "Lima",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "Ottawa",
+          "en": "Ottawa",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "ek": "B",
+        "buyuk": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "BLG-04",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Eyfel Kulesi hangi şehirdedir?",
+      "soru_en": "Question: In which city is the Eiffel Tower?",
+      "secenekler": {
+        "A": {
+          "tr": "Lyon",
+          "en": "Lyon",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "Paris",
+          "en": "Paris",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "Tokyo",
+          "en": "Tokyo",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "Brüksel",
+          "en": "Brussels",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "dogru": "B",
+        "buyuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "BLG-05",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Gize piramitleri hangi ülkededir?",
+      "soru_en": "Question: In which country are the Pyramids of Giza?",
+      "secenekler": {
+        "A": {
+          "tr": "Mısır",
+          "en": "Egypt",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "Sudan",
+          "en": "Sudan",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "Libya",
+          "en": "Libya",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "Norveç",
+          "en": "Norway",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "kucuk": "B",
+        "ek": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "BLG-06",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Güneş Sistemi'nin en büyük gezegeni hangisidir?",
+      "soru_en": "Question: What is the largest planet in the Solar System?",
+      "secenekler": {
+        "A": {
+          "tr": "Jüpiter",
+          "en": "Jupiter",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "Neptün",
+          "en": "Neptune",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "Merkür",
+          "en": "Mercury",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "Satürn",
+          "en": "Saturn",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "ek": "B",
+        "buyuk": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "BLG-07",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Güneş'e en yakın gezegen hangisidir?",
+      "soru_en": "Question: Which planet is closest to the Sun?",
+      "secenekler": {
+        "A": {
+          "tr": "Mars",
+          "en": "Mars",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "Venüs",
+          "en": "Venus",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "Neptün",
+          "en": "Neptune",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "Merkür",
+          "en": "Mercury",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "kucuk": "B",
+        "buyuk": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "BLG-08",
+      "tur": "bilgi",
+      "soru_tr": "Soru: \"Kızıl Gezegen\" olarak bilinen gezegen hangisidir?",
+      "soru_en": "Question: Which planet is known as the \"Red Planet\"?",
+      "secenekler": {
+        "A": {
+          "tr": "Mars",
+          "en": "Mars",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "Uranüs",
+          "en": "Uranus",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "Jüpiter",
+          "en": "Jupiter",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "Venüs",
+          "en": "Venus",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "buyuk": "B",
+        "ek": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "BLG-09",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Suyun kimyasal formülü nedir?",
+      "soru_en": "Question: What is the chemical formula of water?",
+      "secenekler": {
+        "A": {
+          "tr": "CO₂",
+          "en": "CO₂",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "H₂O",
+          "en": "H₂O",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "H₂O₂",
+          "en": "H₂O₂",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "NaCl",
+          "en": "NaCl",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "dogru": "B",
+        "kucuk": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "BLG-10",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Altının kimyasal sembolü nedir?",
+      "soru_en": "Question: What is the chemical symbol for gold?",
+      "secenekler": {
+        "A": {
+          "tr": "Al",
+          "en": "Al",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "Ag",
+          "en": "Ag",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "Au",
+          "en": "Au",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "O",
+          "en": "O",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "BLG-11",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Bitkiler fotosentezde havadan hangi gazı alır?",
+      "soru_en": "Question: Which gas do plants take from the air during photosynthesis?",
+      "secenekler": {
+        "A": {
+          "tr": "Helyum",
+          "en": "Helium",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "Oksijen",
+          "en": "Oxygen",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "Karbondioksit",
+          "en": "Carbon dioxide",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "Azot",
+          "en": "Nitrogen",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "BLG-12",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Dünya atmosferinin büyük kısmını hangi gaz oluşturur?",
+      "soru_en": "Question: Which gas makes up most of Earth's atmosphere?",
+      "secenekler": {
+        "A": {
+          "tr": "Oksijen",
+          "en": "Oxygen",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "Azot",
+          "en": "Nitrogen",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "Karbondioksit",
+          "en": "Carbon dioxide",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "Helyum",
+          "en": "Helium",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "dogru": "B",
+        "ek": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "BLG-13",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Romeo ve Juliet'i kim yazmıştır?",
+      "soru_en": "Question: Who wrote Romeo and Juliet?",
+      "secenekler": {
+        "A": {
+          "tr": "Isaac Newton",
+          "en": "Isaac Newton",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "William Shakespeare",
+          "en": "William Shakespeare",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "Charles Dickens",
+          "en": "Charles Dickens",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "Christopher Marlowe",
+          "en": "Christopher Marlowe",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "dogru": "B",
+        "ek": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "BLG-14",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Mona Lisa'yı kim resmetmiştir?",
+      "soru_en": "Question: Who painted the Mona Lisa?",
+      "secenekler": {
+        "A": {
+          "tr": "Leonardo da Vinci",
+          "en": "Leonardo da Vinci",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "Albert Einstein",
+          "en": "Albert Einstein",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "Michelangelo",
+          "en": "Michelangelo",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "Raffaello",
+          "en": "Raphael",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "buyuk": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "BLG-15",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Görelilik kuramını kim geliştirmiştir?",
+      "soru_en": "Question: Who developed the theory of relativity?",
+      "secenekler": {
+        "A": {
+          "tr": "W. A. Mozart",
+          "en": "W. A. Mozart",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "Niels Bohr",
+          "en": "Niels Bohr",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "Albert Einstein",
+          "en": "Albert Einstein",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "Isaac Newton",
+          "en": "Isaac Newton",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "ek": "B",
+        "dogru": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "BLG-16",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Penisilini kim keşfetmiştir?",
+      "soru_en": "Question: Who discovered penicillin?",
+      "secenekler": {
+        "A": {
+          "tr": "Louis Pasteur",
+          "en": "Louis Pasteur",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "Napolyon Bonapart",
+          "en": "Napoleon Bonaparte",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "Robert Koch",
+          "en": "Robert Koch",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "Alexander Fleming",
+          "en": "Alexander Fleming",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "buyuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "BLG-17",
+      "tur": "bilgi",
+      "soru_tr": "Soru: İlk insanlı Ay inişi hangi yılda gerçekleşmiştir?",
+      "soru_en": "Question: In which year did the first crewed Moon landing take place?",
+      "secenekler": {
+        "A": {
+          "tr": "1975",
+          "en": "1975",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "1869",
+          "en": "1869",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "1967",
+          "en": "1967",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "1969",
+          "en": "1969",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "buyuk": "B",
+        "kucuk": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "BLG-18",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Dünyanın en büyük okyanusu hangisidir?",
+      "soru_en": "Question: What is the largest ocean on Earth?",
+      "secenekler": {
+        "A": {
+          "tr": "Atlantik",
+          "en": "Atlantic",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "Hint",
+          "en": "Indian",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "Arktik",
+          "en": "Arctic",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "Pasifik",
+          "en": "Pacific",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "ek": "B",
+        "buyuk": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "BLG-19",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Nüfusu en fazla olan kıta hangisidir?",
+      "soru_en": "Question: Which continent has the largest population?",
+      "secenekler": {
+        "A": {
+          "tr": "Antarktika",
+          "en": "Antarctica",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "Avrupa",
+          "en": "Europe",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "Asya",
+          "en": "Asia",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "Afrika",
+          "en": "Africa",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "ek": "B",
+        "dogru": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "BLG-20",
+      "tur": "bilgi",
+      "soru_tr": "Soru: Antik Olimpiyat Oyunları hangi ülkede başlamıştır?",
+      "soru_en": "Question: In which country did the ancient Olympic Games begin?",
+      "secenekler": {
+        "A": {
+          "tr": "Mısır",
+          "en": "Egypt",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "İtalya",
+          "en": "Italy",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "Yunanistan",
+          "en": "Greece",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "Japonya",
+          "en": "Japan",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "ART-01",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 41 × 5 kaçtır?",
+      "soru_en": "Question: What is 41 × 5?",
+      "secenekler": {
+        "A": {
+          "tr": "205",
+          "en": "205",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "176",
+          "en": "176",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "215",
+          "en": "215",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "276",
+          "en": "276",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "ek": "B",
+        "kucuk": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "ART-02",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 88 × 6 kaçtır?",
+      "soru_en": "Question: What is 88 × 6?",
+      "secenekler": {
+        "A": {
+          "tr": "691",
+          "en": "691",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "528",
+          "en": "528",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "448",
+          "en": "448",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "548",
+          "en": "548",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "dogru": "B",
+        "ek": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "ART-03",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 31 × 5 kaçtır?",
+      "soru_en": "Question: What is 31 × 5?",
+      "secenekler": {
+        "A": {
+          "tr": "117",
+          "en": "117",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "81",
+          "en": "81",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "155",
+          "en": "155",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "165",
+          "en": "165",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "buyuk": "B",
+        "dogru": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "ART-04",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 45 × 6 kaçtır?",
+      "soru_en": "Question: What is 45 × 6?",
+      "secenekler": {
+        "A": {
+          "tr": "270",
+          "en": "270",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "302",
+          "en": "302",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "260",
+          "en": "260",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "153",
+          "en": "153",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "ek": "B",
+        "kucuk": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "ART-05",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 92 × 5 kaçtır?",
+      "soru_en": "Question: What is 92 × 5?",
+      "secenekler": {
+        "A": {
+          "tr": "566",
+          "en": "566",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "243",
+          "en": "243",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "460",
+          "en": "460",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "430",
+          "en": "430",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "buyuk": "B",
+        "dogru": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "ART-06",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 47 × 9 kaçtır?",
+      "soru_en": "Question: What is 47 × 9?",
+      "secenekler": {
+        "A": {
+          "tr": "227",
+          "en": "227",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "403",
+          "en": "403",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "510",
+          "en": "510",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "423",
+          "en": "423",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "kucuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "ART-07",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 64 × 9 kaçtır?",
+      "soru_en": "Question: What is 64 × 9?",
+      "secenekler": {
+        "A": {
+          "tr": "576",
+          "en": "576",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "449",
+          "en": "449",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "385",
+          "en": "385",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "596",
+          "en": "596",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "ek": "B",
+        "buyuk": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "ART-08",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 24 × 8 kaçtır?",
+      "soru_en": "Question: What is 24 × 8?",
+      "secenekler": {
+        "A": {
+          "tr": "202",
+          "en": "202",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "192",
+          "en": "192",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "276",
+          "en": "276",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "237",
+          "en": "237",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "dogru": "B",
+        "buyuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "ART-09",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 67 × 3 kaçtır?",
+      "soru_en": "Question: What is 67 × 3?",
+      "secenekler": {
+        "A": {
+          "tr": "280",
+          "en": "280",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "201",
+          "en": "201",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "191",
+          "en": "191",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "179",
+          "en": "179",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "dogru": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "ART-10",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 89 × 7 kaçtır?",
+      "soru_en": "Question: What is 89 × 7?",
+      "secenekler": {
+        "A": {
+          "tr": "643",
+          "en": "643",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "536",
+          "en": "536",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "866",
+          "en": "866",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "623",
+          "en": "623",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "ek": "B",
+        "buyuk": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "ART-11",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 87 × 8 kaçtır?",
+      "soru_en": "Question: What is 87 × 8?",
+      "secenekler": {
+        "A": {
+          "tr": "946",
+          "en": "946",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "726",
+          "en": "726",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "793",
+          "en": "793",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "696",
+          "en": "696",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "kucuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "ART-12",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 49 × 5 kaçtır?",
+      "soru_en": "Question: What is 49 × 5?",
+      "secenekler": {
+        "A": {
+          "tr": "255",
+          "en": "255",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "245",
+          "en": "245",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "151",
+          "en": "151",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "293",
+          "en": "293",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "dogru": "B",
+        "buyuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "ART-13",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 57 × 4 kaçtır?",
+      "soru_en": "Question: What is 57 × 4?",
+      "secenekler": {
+        "A": {
+          "tr": "183",
+          "en": "183",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "238",
+          "en": "238",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "228",
+          "en": "228",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "326",
+          "en": "326",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "ART-14",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 56 × 6 kaçtır?",
+      "soru_en": "Question: What is 56 × 6?",
+      "secenekler": {
+        "A": {
+          "tr": "356",
+          "en": "356",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "336",
+          "en": "336",
+          "rol": "dogru"
+        },
+        "C": {
+          "tr": "230",
+          "en": "230",
+          "rol": "buyuk"
+        },
+        "D": {
+          "tr": "413",
+          "en": "413",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "dogru": "B",
+        "buyuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "ART-15",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 75 × 6 kaçtır?",
+      "soru_en": "Question: What is 75 × 6?",
+      "secenekler": {
+        "A": {
+          "tr": "420",
+          "en": "420",
+          "rol": "kucuk"
+        },
+        "B": {
+          "tr": "662",
+          "en": "662",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "388",
+          "en": "388",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "450",
+          "en": "450",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "kucuk": "A",
+        "buyuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    },
+    {
+      "id": "ART-16",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 95 × 3 kaçtır?",
+      "soru_en": "Question: What is 95 × 3?",
+      "secenekler": {
+        "A": {
+          "tr": "285",
+          "en": "285",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "230",
+          "en": "230",
+          "rol": "ek"
+        },
+        "C": {
+          "tr": "275",
+          "en": "275",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "421",
+          "en": "421",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "ek": "B",
+        "kucuk": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "ART-17",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 59 × 4 kaçtır?",
+      "soru_en": "Question: What is 59 × 4?",
+      "secenekler": {
+        "A": {
+          "tr": "202",
+          "en": "202",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "340",
+          "en": "340",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "236",
+          "en": "236",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "246",
+          "en": "246",
+          "rol": "kucuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "buyuk": "B",
+        "dogru": "C",
+        "kucuk": "D"
+      }
+    },
+    {
+      "id": "ART-18",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 36 × 6 kaçtır?",
+      "soru_en": "Question: What is 36 × 6?",
+      "secenekler": {
+        "A": {
+          "tr": "216",
+          "en": "216",
+          "rol": "dogru"
+        },
+        "B": {
+          "tr": "139",
+          "en": "139",
+          "rol": "buyuk"
+        },
+        "C": {
+          "tr": "226",
+          "en": "226",
+          "rol": "kucuk"
+        },
+        "D": {
+          "tr": "183",
+          "en": "183",
+          "rol": "ek"
+        }
+      },
+      "harfler": {
+        "dogru": "A",
+        "buyuk": "B",
+        "kucuk": "C",
+        "ek": "D"
+      }
+    },
+    {
+      "id": "ART-19",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 63 × 6 kaçtır?",
+      "soru_en": "Question: What is 63 × 6?",
+      "secenekler": {
+        "A": {
+          "tr": "319",
+          "en": "319",
+          "rol": "ek"
+        },
+        "B": {
+          "tr": "358",
+          "en": "358",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "378",
+          "en": "378",
+          "rol": "dogru"
+        },
+        "D": {
+          "tr": "230",
+          "en": "230",
+          "rol": "buyuk"
+        }
+      },
+      "harfler": {
+        "ek": "A",
+        "kucuk": "B",
+        "dogru": "C",
+        "buyuk": "D"
+      }
+    },
+    {
+      "id": "ART-20",
+      "tur": "aritmetik",
+      "soru_tr": "Soru: 52 × 8 kaçtır?",
+      "soru_en": "Question: What is 52 × 8?",
+      "secenekler": {
+        "A": {
+          "tr": "272",
+          "en": "272",
+          "rol": "buyuk"
+        },
+        "B": {
+          "tr": "396",
+          "en": "396",
+          "rol": "kucuk"
+        },
+        "C": {
+          "tr": "330",
+          "en": "330",
+          "rol": "ek"
+        },
+        "D": {
+          "tr": "416",
+          "en": "416",
+          "rol": "dogru"
+        }
+      },
+      "harfler": {
+        "buyuk": "A",
+        "kucuk": "B",
+        "ek": "C",
+        "dogru": "D"
+      }
+    }
+  ]
+}

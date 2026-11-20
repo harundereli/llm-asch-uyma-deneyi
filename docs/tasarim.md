@@ -88,12 +88,14 @@ Her sorunun **4 sabit şıkkı** vardır:
 
 ### 3.2 Tür bazında kurallar
 
-- **Çizgi:** Referans uzunluk 5–15 cm arası tam sayıdır. Küçük yanlış doğrudan 1–2 cm, büyük
-  yanlış 4–6 cm uzaklıktadır. Bütün uzunluklar pozitiftir. Ek şık diğer şıklardan farklıdır ve
-  doğrudan en az 3 cm uzaktır.
-- **Aritmetik:** İki basamaklı × tek basamaklı çarpmadır. Bütün şıklar birbirinden farklı
-  pozitif tam sayılardır. Küçük yanlış doğru sonuçtan yaklaşık %3–7, büyük yanlış yaklaşık
-  %30–50 uzaklıktadır; ek şık bu iki uzaklığın arasındadır.
+- **Çizgi:** Referans uzunluk 5–15 cm arası tam sayıdır; bu aralıktaki her uzunluk 1 ya da 2
+  kez kullanılır. Küçük yanlış doğrudan 1–2 cm, büyük yanlış 4–6 cm uzaklıktadır. Bütün
+  uzunluklar pozitiftir. Ek şık diğer şıklardan farklıdır ve doğrudan en az 3 cm uzaktır.
+- **Aritmetik:** İki basamaklı × tek basamaklı çarpmadır; iki basamaklı çarpan her soruda
+  farklıdır. Bütün şıklar birbirinden farklı pozitif tam sayılardır. Küçük yanlış doğru
+  sonuçtan %3–7, büyük yanlış %30–50, ek şık %10–25 uzaklıktadır. Küçük yanlış doğru sonuçla
+  aynı son basamağı taşır (fark 10'un katıdır); böylece yalnızca son basamağa bakılarak
+  elenemez.
 - **Bilgi:** (1) Evrenseldir; belirli bir ülkenin müfredatına ya da Türkiye'ye özgü bilgi
   gerektirmez. (2) Tek ve tartışmasız bir doğru cevabı vardır; cevabı tartışmalı olan ya da
   zamanla değişebilecek sorular kullanılmaz. (3) Küçük yanlış makul bir çeldirici, büyük yanlış
@@ -503,3 +505,4 @@ Ana deney ön kayıttan sonra başlar.
 | Tarih | Değişiklik | Gerekçe |
 |---|---|---|
 | 20.11.2026 | İlk sürüm | — |
+| 20.11.2026 | Bölüm 3.2: çizgide referans uzunluklarının dengeli dağılımı; aritmetikte farklı çarpanlar, ek şık aralığının (%10–25) netleştirilmesi ve küçük yanlışın son basamak kuralı | Soru üreticisi yazılırken yapılan iyileştirmeler. Veri toplanmadan önce. |
