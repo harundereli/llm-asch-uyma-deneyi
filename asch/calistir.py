@@ -5,7 +5,9 @@ Planı (asch.plan) alır; her deneme için promptu oluşturur (asch.promptlar), 
 (asch.model), cevabı sınıflandırır (asch.siniflandirma) ve sonucu hemen diske yazar (asch.kayit).
 
 - Hız: İstekler dakikada en fazla `rpm` olacak şekilde eşit aralıklarla, `paralel` iş parçacığıyla
-  gönderilir. Sunucu zorlanırsa (429, yeniden denemeler) hız otomatik düşer, toparlanınca geri gelir.
+  gönderilir. Aynı modele aynı anda en fazla `model_esz` istek gider (EVREN, yoğun modellerde hesap
+  başına eşzamanlı isteği sınırlıyor). Sunucu zorlanırsa (429, yeniden denemeler) hız otomatik düşer,
+  toparlanınca geri gelir.
 - Kaldığı yerden devam: Tamamlanmış denemeler kayıttan okunur ve atlanır.
 - B düzeneği: Bir grup, üç modelin sırayla cevapladığı tek bir denemedir. Grup yarıda kalırsa
   (teknik hata ya da durdurma) bir sonraki çalıştırmada baştan yapılır.
@@ -24,6 +26,7 @@ Kullanım:
     python -m asch.calistir ana --parca A_normal     Yalnızca bir parça
     python -m asch.calistir pilot --sinir 5          Her parçadan yalnızca ilk 5 deneme
     python -m asch.calistir ana --kuru               API'ye gitmeden ne yapılacağını gösterir
+    python -m asch.calistir ana --model-esz 3        Model başına eşzamanlı istek sınırını değiştirir
 """
 
 import argparse
@@ -45,7 +48,8 @@ from asch.promptlar import mesajlar
 from asch.siniflandirma import Ayristirma, cevabi_ayristir, siniflandir
 
 VARSAYILAN_RPM = 180        # anahtarın tavanı 200; biraz pay bırakılır
-VARSAYILAN_PARALEL = 8
+VARSAYILAN_PARALEL = 16
+VARSAYILAN_MODEL_ESZ = 2    # pilotta EVREN: "hesabınız bu modelde en fazla 2 eşzamanlı istek açabilir"
 TOKEN_SINIRI = 9_000_000    # bir çalıştırmada; anahtarın günlük 10 milyon tavanının altında
 ART_ARDA_HATA_SINIRI = 20
 DURDURAN_HATALAR = {
@@ -136,6 +140,7 @@ class Calistirici:
         *,
         rpm: float = VARSAYILAN_RPM,
         paralel: int = VARSAYILAN_PARALEL,
+        model_esz: int = VARSAYILAN_MODEL_ESZ,
         token_siniri: int = TOKEN_SINIRI,
         cagri_fonksiyonu: Callable[..., CagriSonucu] = cagir,
         yeniden_deneme_bekle: Callable[[float], None] | None = None,
@@ -146,6 +151,8 @@ class Calistirici:
         self.sorular = {s["id"]: s for s in sorular}
         self.hiz = HizSinirlayici(rpm)
         self.paralel = paralel
+        self.model_esz = model_esz
+        self._model_kapilari: dict[str, threading.Semaphore] = {}
         self.token_siniri = token_siniri
         self._cagir = cagri_fonksiyonu
         # Yeniden denemeler arasında beklerken küçük bir rastgele sapma (iş parçacıkları aynı anda dönmesin)
@@ -198,14 +205,24 @@ class Calistirici:
 
     # -------------------------------------------------- tek çağrı ve kayıt
 
+    def _model_kapisi(self, model: str) -> threading.Semaphore:
+        """Her model için aynı anda en fazla `model_esz` isteğe izin veren kapı."""
+        with self._kilit:
+            if model not in self._model_kapilari:
+                self._model_kapilari[model] = threading.Semaphore(self.model_esz)
+            return self._model_kapilari[model]
+
     def _cagri(self, deneme: Deneme, model: str, mesaj: list[dict]) -> CagriSonucu | None:
         if self.durdur.is_set():
             return None
-        self.hiz.bekle()
-        if self.durdur.is_set():
-            return None
-        sonuc = self._cagir(self.istemci, model, mesaj, temperature=deneme.temperature,
-                            max_tokens=deneme.max_tokens, bekle=self._yeniden_deneme_bekle)
+        with self._model_kapisi(model):  # bu modele giden istek sayısı sınırın altına inene kadar bekler
+            if self.durdur.is_set():
+                return None
+            self.hiz.bekle()
+            if self.durdur.is_set():
+                return None
+            sonuc = self._cagir(self.istemci, model, mesaj, temperature=deneme.temperature,
+                                max_tokens=deneme.max_tokens, bekle=self._yeniden_deneme_bekle)
         self._denetle(sonuc)
         return sonuc
 
@@ -360,6 +377,8 @@ def main(argv: list[str] | None = None) -> int:
     ayrac.add_argument("--sinir", type=int, help="her parçadan en fazla bu kadar deneme (deneme amaçlı)")
     ayrac.add_argument("--rpm", type=float, default=VARSAYILAN_RPM)
     ayrac.add_argument("--paralel", type=int, default=VARSAYILAN_PARALEL)
+    ayrac.add_argument("--model-esz", type=int, default=VARSAYILAN_MODEL_ESZ,
+                       help="aynı modele aynı anda gönderilebilecek en fazla istek sayısı")
     ayrac.add_argument("--kuru", action="store_true", help="API'ye gitmeden yalnızca ne yapılacağını gösterir")
     a = ayrac.parse_args(argv)
 
@@ -383,7 +402,8 @@ def main(argv: list[str] | None = None) -> int:
                   f"({_sayi(sum(d.cagri_sayisi for d in kalan))} çağrı)")
         return 0
 
-    calistirici = Calistirici(istemci_olustur(), kayit, sorular, rpm=a.rpm, paralel=a.paralel)
+    calistirici = Calistirici(istemci_olustur(), kayit, sorular, rpm=a.rpm, paralel=a.paralel,
+                              model_esz=a.model_esz)
     for parca, denemeler in plan.items():
         if not calistirici.calistir(denemeler, parca):
             break

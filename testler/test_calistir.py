@@ -11,6 +11,7 @@ import json
 import re
 import threading
 import time
+from collections import Counter
 from pathlib import Path
 
 import pytest
@@ -43,13 +44,24 @@ class SahteEvren:
         self.gecikme = gecikme
         self.cagrilar = []
         self._kilit = threading.Lock()
+        self._aktif = Counter()          # şu an her modele giden istek sayısı
+        self.en_fazla_aktif = Counter()  # her model için görülen en yüksek eşzamanlı istek sayısı
 
     def __call__(self, istemci, model, mesaj, *, temperature, max_tokens, bekle):
         with self._kilit:
             self.cagrilar.append({"model": model, "mesaj": mesaj, "temperature": temperature, "max_tokens": max_tokens})
             no = len(self.cagrilar)
-        if self.gecikme:
-            time.sleep(self.gecikme)
+            self._aktif[model] += 1
+            self.en_fazla_aktif[model] = max(self.en_fazla_aktif[model], self._aktif[model])
+        try:
+            if self.gecikme:
+                time.sleep(self.gecikme)
+            return self._sonuc(model, mesaj, no)
+        finally:
+            with self._kilit:
+                self._aktif[model] -= 1
+
+    def _sonuc(self, model, mesaj, no):
         if no in self.hatalar:
             tur = self.hatalar[no]
             return CagriSonucu(istenen_model=model, hata_turu=tur, hata_mesaji="sahte hata",
@@ -276,3 +288,43 @@ def test_paralel_calismada_her_deneme_bir_kez_yapilir(tmp_path):
     assert len(sahte.cagrilar) == len(satirlar) == 150 + 20 * 3
     assert len({s["deneme_id"] for s in satirlar}) == len(satirlar)
     assert kalan_denemeler(denemeler, satirlar) == []
+
+
+class SahteToplamEsz(SahteEvren):
+    """Bütün modellere giden toplam eşzamanlı istek sayısını da ölçer."""
+
+    def __init__(self, **ek):
+        super().__init__(**ek)
+        self._toplam = 0
+        self.en_fazla_toplam = 0
+        self._toplam_kilit = threading.Lock()
+
+    def __call__(self, *a, **k):
+        with self._toplam_kilit:
+            self._toplam += 1
+            self.en_fazla_toplam = max(self.en_fazla_toplam, self._toplam)
+        try:
+            return super().__call__(*a, **k)
+        finally:
+            with self._toplam_kilit:
+                self._toplam -= 1
+
+
+@pytest.mark.parametrize("sinir", [1, 2, 3])
+def test_ayni_modele_sinirdan_fazla_eszamanli_istek_gitmez(tmp_path, sinir):
+    denemeler = PLAN["A_normal"][:120] + PLAN["B"][:10]
+    sahte = SahteEvren(gecikme=0.01)
+    assert _calistirici(tmp_path, sahte, paralel=16, model_esz=sinir).calistir(denemeler, "karisik")
+    assert len(_satirlar(tmp_path)) == 120 + 10 * 3
+    assert max(sahte.en_fazla_aktif.values()) == sinir   # sınıra ulaşılıyor ama asla aşılmıyor
+    assert set(sahte.en_fazla_aktif) == {"deepseek-v4.1-flash", "qwen3.8-flash-next", "gemma-4-31b"}
+
+
+def test_bir_modelin_siniri_digerlerini_durdurmaz(tmp_path):
+    """Her modele aynı anda en fazla 1 istek gitse de farklı modellere aynı anda istek gidebilmeli."""
+    modeller = ("deepseek-v4.1-flash", "qwen3.8-flash-next", "gemma-4-31b")
+    denemeler = [d for m in modeller for d in [x for x in PLAN["A_normal"] if x.model == m][:30]]
+    sahte = SahteToplamEsz(gecikme=0.01)
+    _calistirici(tmp_path, sahte, paralel=16, model_esz=1).calistir(denemeler, "x")
+    assert max(sahte.en_fazla_aktif.values()) == 1
+    assert sahte.en_fazla_toplam >= 2
