@@ -55,9 +55,11 @@
 - **Cevap biçimi:** `response_format: {"type": "json_object"}`.
 - **Her çağrıda kaydedilenler:** İstenen model adı, API'nin döndürdüğü model adı, varsa sürüm
   bilgisi, bütün istek ayarları, zaman damgası.
-- **Durdurma kuralı:** Deney sırasında API'nin döndürdüğü model adı ya da sürüm bilgisi
-  değişirse deney durdurulur. Yeni sürümle devam edilecekse bu ayrı bir deney serisi olarak
-  işaretlenir.
+- **Durdurma kuralı:** Deney sırasında API'nin döndürdüğü model adı değişirse deney
+  durdurulur. Yeni sürümle devam edilecekse bu ayrı bir deney serisi olarak işaretlenir.
+  Aynı model adının farklı sunucu örneklerinden cevap vermesi (farklı sistem izi) platformun
+  yük dengelemesinin doğal sonucudur ve durdurma nedeni sayılmaz; sistem izi her satırda
+  kaydedilir (pilotta gözlendi, bkz. `docs/pilot_raporu.md`).
 
 ## 3. Görev ve soru havuzu
 
@@ -329,7 +331,8 @@ Her koşulda **60 soru × 2 tekrar** (bilgi testi ve gerekçe ek testi hariç).
 | Pilot | | ~600 |
 | **Toplam** | | **~28.500** |
 
-- **Tahmini token:** ~8,4 milyon. Önbellek indirimi hesaba katılmamıştır.
+- **Tahmini token:** ~5,9 milyon. Pilotta ölçülen token/karakter oranlarıyla her denemenin
+  promptu üzerinden hesaplanmıştır; önbellek indirimi hesaba katılmamıştır. 
 - **Sınırlar:** Anahtar başına günlük 10 milyon, hesap başına günlük 15 milyon token
   (sıfırlanma 00:00 UTC). RPM tavanı 200. Ücretsiz dönem 1 Aralık 2026'da, API anahtarı
   30 Kasım 2026'da sona erer.
@@ -343,7 +346,8 @@ Her koşulda **60 soru × 2 tekrar** (bilgi testi ve gerekçe ek testi hariç).
 
 Bu kurallar deneyin bilimsel tasarımını değiştirmez; verinin nasıl toplandığını belirler.
 
-- **Hız:** Dakikada en fazla 180 istek (anahtarın tavanı 200), aynı anda 8 paralel istek.
+- **Hız:** Dakikada en fazla 180 istek (anahtarın tavanı 200), 16 paralel iş parçacığı; aynı
+  modele aynı anda en fazla 2 istek (EVREN'in yoğun modellerde hesap başına uyguladığı sınır).
   Sunucu zorlandığında (429 hatası ya da yeniden denemeler) hız otomatik düşer, toparlanınca
   kademeli olarak geri gelir.
 - **Yeniden deneme:** Teknik hatalar (bağlantı, zaman aşımı, 429, sunucu hatası) aynı çağrıda en
@@ -383,7 +387,8 @@ Pilot verisi ana analize **dahil edilmez.**
    yeniden deneme mekanizması, kaldığı yerden devam etme
 
 Pilottan sonra gerekli düzeltmeler değişiklik günlüğüne yazılır ve **OSF ön kaydı yapılır.**
-Ana deney ön kayıttan sonra başlar.
+Ana deney ön kayıttan sonra başlar. Pilotun sonuçları ve buna dayanarak alınan kararlar:
+`docs/pilot_raporu.md`.
 
 ## 9. Hipotezler
 
@@ -556,3 +561,4 @@ Ana deney ön kayıttan sonra başlar.
 | 21.11.2026 | Bölüm 4.6 ve 8: Gerekçe ek testinde ve pilot tutarlılık testinde kullanılan sorular ve pilot tutarlılık testinin koşulu açıkça belirtildi | Deney planı kodu yazılırken netleştirildi; seçimler sonuçlardan bağımsızdır. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 7.1: Çalıştırma kuralları eklendi (hız, yeniden deneme, durdurma koşulları, B'de yarım kalan grupların işlenmesi, kayıt dosyaları) | Çalıştırıcı yazılırken belirlendi; verinin nasıl toplandığını belgelemek için. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 6.2: Kayıt alanlarının listesi kodun kaydettiği alanlarla birebir eşleştirildi | Altyapı sonu kontrolünde fark edildi; yalnızca ifade düzeltmesi, kaydedilen bilgi değişmedi. Veri toplanmadan önce. |
+| 21.11.2026 | Pilot tamamlandı. Bölüm 2: durdurma kuralı netleştirildi (sistem izi). Bölüm 7: token tahmini ~5,9 milyon. Bölüm 7.1: model başına en fazla 2 eşzamanlı istek, 16 paralel iş parçacığı. Bölüm 8: pilot raporuna bağlantı. | Pilot bulguları (`docs/pilot_raporu.md`). Yalnızca teknik değişiklikler; hipotez, koşul ve analiz planı değişmedi. Veri toplanmadan önce. |
