@@ -389,6 +389,7 @@ Pilot verisi ana analize **dahil edilmez.**
 Pilottan sonra gerekli düzeltmeler değişiklik günlüğüne yazılır ve **OSF ön kaydı yapılır.**
 Ana deney ön kayıttan sonra başlar. Pilotun sonuçları ve buna dayanarak alınan kararlar:
 `docs/pilot_raporu.md`.
+Ön kayıt: https://osf.io/y45rq (21.11.2026).
 
 ## 9. Hipotezler
 
@@ -562,3 +563,4 @@ Ana deney ön kayıttan sonra başlar. Pilotun sonuçları ve buna dayanarak al�
 | 21.11.2026 | Bölüm 7.1: Çalıştırma kuralları eklendi (hız, yeniden deneme, durdurma koşulları, B'de yarım kalan grupların işlenmesi, kayıt dosyaları) | Çalıştırıcı yazılırken belirlendi; verinin nasıl toplandığını belgelemek için. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 6.2: Kayıt alanlarının listesi kodun kaydettiği alanlarla birebir eşleştirildi | Altyapı sonu kontrolünde fark edildi; yalnızca ifade düzeltmesi, kaydedilen bilgi değişmedi. Veri toplanmadan önce. |
 | 21.11.2026 | Pilot tamamlandı. Bölüm 2: durdurma kuralı netleştirildi (sistem izi). Bölüm 7: token tahmini ~5,9 milyon. Bölüm 7.1: model başına en fazla 2 eşzamanlı istek, 16 paralel iş parçacığı. Bölüm 8: pilot raporuna bağlantı. | Pilot bulguları (`docs/pilot_raporu.md`). Yalnızca teknik değişiklikler; hipotez, koşul ve analiz planı değişmedi. Veri toplanmadan önce. |
+| 21.11.2026 | Bölüm 8: OSF ön kayıt bağlantısı eklendi | Ön kayıt yapıldıktan sonra; yalnızca bağlantı eklendi, içerik değişmedi. |

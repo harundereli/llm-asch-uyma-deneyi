@@ -1,8 +1,8 @@
 # Dil Modeli Ajanlarında Asch Paradigmasıyla Çoğunluk Etkisi
 
-> **Durum:** Altyapı tamamlandı ve otomatik testlerle doğrulandı. Pilot çalışma aşamasında;
-> henüz ana veri toplanmadı. Araştırma tasarımı veri toplanmadan önce yazılmış ve tarihli
-> olarak kayıt altına alınmıştır.
+> **Durum:** Altyapı tamamlandı ve otomatik testlerle doğrulandı. Pilot çalışma tamamlandı
+> ([pilot raporu](docs/pilot_raporu.md)); henüz ana veri toplanmadı. Araştırma tasarımı ve
+> hipotezler veri toplanmadan önce OSF'de ön kayda alınmıştır: https://osf.io/y45rq
 
 Bu proje, Solomon Asch'ın klasik uyma deneylerini (1951, 1956) büyük dil modellerine uyarlar.
 Temel soru: Bir dil modeli, doğru cevabı bildiği hâlde, yanlış cevap veren bir çoğunluğa uyar mı?
@@ -32,11 +32,14 @@ Birden fazla model aynı gruptayken birbirlerini nasıl etkiler?
 
 Tasarımın tamamı (hipotezler, analiz planı, sınırlılıklar): [`docs/tasarim.md`](docs/tasarim.md)
 
+Ön kayıt (OSF, 21.11.2026): https://osf.io/y45rq
+
 ## Proje yapısı
 
 | Yol | İçerik |
 |---|---|
 | `docs/tasarim.md` | Araştırma tasarımı ve hipotezler |
+| `docs/pilot_raporu.md` | Pilot çalışmanın raporu |
 | `asch/sorular.py` | Soru havuzunun üretilmesi ve doğrulanması |
 | `asch/promptlar.py` | Her deney koşulu için prompt şablonları |
 | `asch/model.py` | EVREN bağlantısı (yeniden deneme ve hata kaydı) |
@@ -46,6 +49,8 @@ Tasarımın tamamı (hipotezler, analiz planı, sınırlılıklar): [`docs/tasar
 | `asch/calistir.py` | Çalıştırıcı: hız sınırı, B grupları, durdurma kuralları, kaldığı yerden devam |
 | `asch/baglanti_testi.py` | EVREN bağlantı testi |
 | `veri/sorular.json` | Deneyde kullanılan 60 soru |
+| `veri/ham/` | Ham veri (her API çağrısı bir satır, JSONL) |
+| `analiz/pilot_analizi.py` | Pilot raporundaki sayıları üreten analiz |
 | `testler/` | Otomatik testler |
 
 ## Kurulum
@@ -66,6 +71,7 @@ python -m asch.baglanti_testi     # EVREN bağlantısını test eder (3 API ça�
 python -m asch.plan               # Deney planının özeti
 python -m asch.calistir ana --kuru   # API'ye gitmeden yapılacakları gösterir
 python -m asch.calistir pilot     # Pilot çalışma (510 çağrı)
+python -m analiz.pilot_analizi    # Pilot raporundaki sayıları üretir
 python -m asch.calistir ana       # Ana deney (kaldığı yerden devam eder)
 ```
 
