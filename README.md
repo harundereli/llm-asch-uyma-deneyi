@@ -42,6 +42,9 @@ Tasarımın tamamı (hipotezler, analiz planı, sınırlılıklar): [`docs/tasar
 | `asch/model.py` | EVREN bağlantısı (yeniden deneme ve hata kaydı) |
 | `asch/siniflandirma.py` | Cevapların ayrıştırılması ve sınıflandırılması |
 | `asch/kayit.py` | Ham veri kaydı (yalnızca ekleme, kaldığı yerden devam) |
+| `asch/plan.py` | Deney planı: bütün denemeler (27.900 ana, 510 pilot çağrısı) |
+| `asch/calistir.py` | Çalıştırıcı: hız sınırı, B grupları, durdurma kuralları, kaldığı yerden devam |
+| `asch/baglanti_testi.py` | EVREN bağlantı testi |
 | `veri/sorular.json` | Deneyde kullanılan 60 soru |
 | `testler/` | Otomatik testler |
 
