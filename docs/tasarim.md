@@ -1,7 +1,7 @@
 # Araştırma Tasarımı: Dil Modeli Ajanlarında Asch Paradigmasıyla Çoğunluk Etkisi
 
 **Sürüm:** 1.0 · **Tarih:** 20 Kasım 2026 · **Durum:** Veri toplanmadan önce yazılmıştır.
-**Ön kayıt:** Pilot çalışmadan sonra, ana deneyden önce OSF'de yapılacaktır.
+**Ön kayıt:** 21 Kasım 2026, pilot çalışmadan sonra ve ana deneyden önce: https://osf.io/y45rq
 **Prototip:** [llm-ajan-uyma-deneyi](https://github.com/harundereli/llm-ajan-uyma-deneyi)
 
 > Bu belge veri toplanmadan önce yazıldı ve git ile kayıt altına alındı. Veri toplandıktan
@@ -457,7 +457,11 @@ Ana deney ön kayıttan sonra başlar. Pilotun sonuçları ve buna dayanarak al�
     bazında eğrilerle B'nin grup sonuçları simüle edilir ve gözlenenle karşılaştırılır.
   - Keşifsel analizlerde p değerleri yalnızca bilgi amaçlı raporlanır.
 - **Güç simülasyonu:** Ana deneyden önce, 60 soru × 2 tekrarın beklenen etki büyüklüklerini
-  yakalamaya yetip yetmediği simülasyonla kontrol edilir.
+  yakalamaya yetip yetmediği simülasyonla kontrol edilir. Sonuçlar ve desteklenmeyen bir
+  hipotezin nasıl yorumlanacağı: `docs/guc_simulasyonu.md`.
+- **Yazılım:** Karma etkili modeller R'da lme4 paketiyle (`glmer`, binom ailesi, paketin
+  varsayılan optimizer ayarı) kurulur; p değerleri Wald z testinden alınır. Sürümler: R 4.6.2,
+  lme4 2.1-0.
 - **İnsan verisiyle karşılaştırma:** Sonuçlar Asch'ın (1956) raporladığı oranlarla aynı
   grafikte gösterilir. Uyaran ve görev farkları nedeniyle bu karşılaştırma yalnızca betimseldir.
 
@@ -564,3 +568,4 @@ Ana deney ön kayıttan sonra başlar. Pilotun sonuçları ve buna dayanarak al�
 | 21.11.2026 | Bölüm 6.2: Kayıt alanlarının listesi kodun kaydettiği alanlarla birebir eşleştirildi | Altyapı sonu kontrolünde fark edildi; yalnızca ifade düzeltmesi, kaydedilen bilgi değişmedi. Veri toplanmadan önce. |
 | 21.11.2026 | Pilot tamamlandı. Bölüm 2: durdurma kuralı netleştirildi (sistem izi). Bölüm 7: token tahmini ~5,9 milyon. Bölüm 7.1: model başına en fazla 2 eşzamanlı istek, 16 paralel iş parçacığı. Bölüm 8: pilot raporuna bağlantı. | Pilot bulguları (`docs/pilot_raporu.md`). Yalnızca teknik değişiklikler; hipotez, koşul ve analiz planı değişmedi. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 8: OSF ön kayıt bağlantısı eklendi | Ön kayıt yapıldıktan sonra; yalnızca bağlantı eklendi, içerik değişmedi. |
+| 21.11.2026 | Başlık: ön kayıt bağlantısı. Bölüm 10: güç simülasyonu yapıldı (sonuçlar ve yorum kuralı `docs/guc_simulasyonu.md`); analiz yazılımı (R, lme4, varsayılan ayarlar, Wald z testi) belirtildi. | Ön kayıttan sonra, veri toplanmadan önce. Ön kayıt yazılımı ve p değeri yöntemini belirtmiyordu; analiz planının içeriği değişmedi. Güç simülasyonu tasarımı değiştirmedi. |

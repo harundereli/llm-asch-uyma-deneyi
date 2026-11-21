@@ -17,3 +17,8 @@ Thumbs.db
 
 # Claude Code (yerel araçlar; repoya gitmez)
 .claude/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/

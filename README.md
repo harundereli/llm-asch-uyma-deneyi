@@ -40,6 +40,7 @@ Tasarımın tamamı (hipotezler, analiz planı, sınırlılıklar): [`docs/tasar
 |---|---|
 | `docs/tasarim.md` | Araştırma tasarımı ve hipotezler |
 | `docs/pilot_raporu.md` | Pilot çalışmanın raporu |
+| `docs/guc_simulasyonu.md` | Güç simülasyonu raporu |
 | `asch/sorular.py` | Soru havuzunun üretilmesi ve doğrulanması |
 | `asch/promptlar.py` | Her deney koşulu için prompt şablonları |
 | `asch/model.py` | EVREN bağlantısı (yeniden deneme ve hata kaydı) |
@@ -51,6 +52,8 @@ Tasarımın tamamı (hipotezler, analiz planı, sınırlılıklar): [`docs/tasar
 | `veri/sorular.json` | Deneyde kullanılan 60 soru |
 | `veri/ham/` | Ham veri (her API çağrısı bir satır, JSONL) |
 | `analiz/pilot_analizi.py` | Pilot raporundaki sayıları üreten analiz |
+| `analiz/guc_simulasyonu.R` | Güç simülasyonu (R) |
+| `analiz/sonuclar/` | Analiz çıktıları |
 | `testler/` | Otomatik testler |
 
 ## Kurulum
@@ -62,6 +65,10 @@ pip install -r requirements.txt
 ```
 
 `.env.example` dosyasını `.env` adıyla kopyalayın ve kendi EVREN API anahtarınızı girin.
+İstatistik analizleri R ile yapılır (R 4.6 ya da üstü ve lme4 paketi):
+```bash
+Rscript -e "install.packages('lme4', repos='https://cloud.r-project.org')"
+```
 
 ```bash
 python -m pytest                  # Otomatik testler
@@ -71,7 +78,8 @@ python -m asch.baglanti_testi     # EVREN bağlantısını test eder (3 API ça�
 python -m asch.plan               # Deney planının özeti
 python -m asch.calistir ana --kuru   # API'ye gitmeden yapılacakları gösterir
 python -m asch.calistir pilot     # Pilot çalışma (510 çağrı)
-python -m analiz.pilot_analizi    # Pilot raporundaki sayıları üretir
+python -m analiz.pilot_analizi    # Pilot raporundaki sayıları üretir 
+Rscript analiz/guc_simulasyonu.R  # Güç simülasyonu (~2,5 saat)
 python -m asch.calistir ana       # Ana deney (kaldığı yerden devam eder)
 ```
 
