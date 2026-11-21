@@ -1,7 +1,8 @@
 # Dil Modeli Ajanlarında Asch Paradigmasıyla Çoğunluk Etkisi
 
-> **Durum:** Altyapı hazırlanıyor. Henüz veri toplanmadı. Araştırma tasarımı veri toplanmadan
-> önce yazılmış ve tarihli olarak kayıt altına alınmıştır.
+> **Durum:** Altyapı tamamlandı ve otomatik testlerle doğrulandı. Pilot çalışma aşamasında;
+> henüz ana veri toplanmadı. Araştırma tasarımı veri toplanmadan önce yazılmış ve tarihli
+> olarak kayıt altına alınmıştır.
 
 Bu proje, Solomon Asch'ın klasik uyma deneylerini (1951, 1956) büyük dil modellerine uyarlar.
 Temel soru: Bir dil modeli, doğru cevabı bildiği hâlde, yanlış cevap veren bir çoğunluğa uyar mı?
@@ -59,6 +60,10 @@ python -m pytest                  # Otomatik testler
 python -m asch.sorular            # Soru havuzunu üretir ve doğrular
 python -m asch.promptlar          # Örnek promptları gösterir
 python -m asch.baglanti_testi     # EVREN bağlantısını test eder (3 API çağrısı)
+python -m asch.plan               # Deney planının özeti
+python -m asch.calistir ana --kuru   # API'ye gitmeden yapılacakları gösterir
+python -m asch.calistir pilot     # Pilot çalışma (510 çağrı)
+python -m asch.calistir ana       # Ana deney (kaldığı yerden devam eder)
 ```
 
 ## Prototip

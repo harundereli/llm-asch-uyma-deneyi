@@ -307,9 +307,11 @@ You are taking part in a group task. Choose exactly one option for each question
 - Her çağrı **JSONL** biçiminde tek bir satır olarak kaydedilir. Bu ham veri dosyasına yalnızca
   ekleme yapılır; **asla değiştirilmez.** Analiz için dönüştürülen veri ayrı dosyalarda tutulur.
 - Her satırda bulunanlar: deney parçası; deneme ve tekrar kimliği; bütün koşul değişkenleri;
-  sıralama ve konuşma sırası (B); önceki cevaplar (B); katılımcı numarası; tam system ve user
-  prompt; ham API yanıtı; ayrıştırılan şık; kategori; durum; hata mesajı; istenen ve dönen model
-  adı; istek ayarları; girdi ve çıktı token sayıları; zaman damgası.
+  sıralama, konuşma sırası, grup ve çalıştırma kimliği (B); önceki modellerin cevapları (B);
+  doğru şık ve çoğunluğun şıkkı; tam system ve user prompt (katılımcı numarası user prompt
+  içindedir); modelin ham cevap metni; ayrıştırılan şık; kategori; durum; hata türü ve mesajı;
+  istenen ve dönen model adı; sistem izi; bitiş nedeni; istek ayarları; girdi, çıktı ve düşünme
+  token sayıları; deneme sayısı; süre; zaman damgası.
 
 ## 7. Hacim ve bütçe
 
@@ -553,3 +555,4 @@ Ana deney ön kayıttan sonra başlar.
 | 21.11.2026 | Bölüm 7: RPM tavanı 60'tan 200'e çıkarıldı (yeni API anahtarı) | Deney süresini kısaltmak için. Deney tasarımını etkilemez. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 4.6 ve 8: Gerekçe ek testinde ve pilot tutarlılık testinde kullanılan sorular ve pilot tutarlılık testinin koşulu açıkça belirtildi | Deney planı kodu yazılırken netleştirildi; seçimler sonuçlardan bağımsızdır. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 7.1: Çalıştırma kuralları eklendi (hız, yeniden deneme, durdurma koşulları, B'de yarım kalan grupların işlenmesi, kayıt dosyaları) | Çalıştırıcı yazılırken belirlendi; verinin nasıl toplandığını belgelemek için. Veri toplanmadan önce. |
+| 21.11.2026 | Bölüm 6.2: Kayıt alanlarının listesi kodun kaydettiği alanlarla birebir eşleştirildi | Altyapı sonu kontrolünde fark edildi; yalnızca ifade düzeltmesi, kaydedilen bilgi değişmedi. Veri toplanmadan önce. |
