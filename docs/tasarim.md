@@ -176,6 +176,8 @@ gerçek nedeni veriye kaydedilir.
 ### 4.6 Gerekçe ek testi (keşifsel)
 
 - k = 3, küçük hata, Türkçe; açık ve gizli; 3 model × 30 soru (her türden 10); bir kez.
+  Kullanılan sorular her türün ilk 10 sorusudur (CZG-01–10, BLG-01–10, ART-01–10). Soru
+  havuzunun sırası rastgele üretildiği için bu, rastgele bir seçime karşılık gelir.
 - Cevap biçimi: `cevap`, `guven` ve `neden` alanlarını **bu sırayla** içeren bir JSON nesnesi.
   Cevap önce istenir; böylece model kararını gerekçe yazmadan verir. Promptta örnek değer
   gösterilmez (belirli bir harfe ya da güven puanına çapalanmayı önlemek için).
@@ -346,7 +348,9 @@ Pilot verisi ana analize **dahil edilmez.**
    toplamaya çevrilir; bilgi sorularında yanlış cevaplanan sorular Bölüm 3.2'deki kurallara
    uyan yeni sorularla değiştirilir. Her iki durumda da sorular yeniden üretilir ve kontrol ön
    testi tekrarlanır. Çizgi türünde bu durum beklenmez; olursa nedeni incelenip raporlanır.
-3. **Tutarlılık testi:** k = 3'te 10 soru × 5 tekrar. Aynı promptun tekrarlarının gerçekten
+3. **Tutarlılık testi:** 10 soru × 5 tekrar × 3 model (150 çağrı). Sorular her türün ilk
+   soruları (3 çizgi: CZG-01–03, 4 bilgi: BLG-01–04, 3 aritmetik: ART-01–03); koşul A: Normal
+   ile aynı yapıda, Türkçe, küçük hata, açık, k = 3. Aynı promptun tekrarlarının gerçekten
    yeni örnekleme ürettiğinin (önbelleğe alınmadığının) kontrolü de bu testle yapılır.
 4. **Teknik kontroller:** JSON uyumu, düşünmenin kapalı olduğu, çağrı başına token, hata ve
    yeniden deneme mekanizması, kaldığı yerden devam etme
@@ -522,3 +526,4 @@ Ana deney ön kayıttan sonra başlar.
 | 20.11.2026 | Bölüm 4.6 ve 5.1: Gerekçe ek testinde alan sırası cevap–güven–neden yapıldı, geçersiz JSON örneği alan tarifiyle değiştirildi. Bölüm 11: system prompt'un tek başına koşullarda da sabit tutulduğu belirtildi. | Dış inceleme önerileri. Tek bir örnek değer yerine alan tarifi, çapa etkisini önlemek için seçildi. Veri toplanmadan önce. |
 | 20.11.2026 | Bölüm 8: Pilottaki kontrol ön testi 60 sorunun tamamına genişletildi ve soru türü düzeyinde bir karar kuralı eklendi | Düşünme kapalıyken aritmetik sorularının zor gelme ihtimaline karşı. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 7: RPM tavanı 60'tan 200'e çıkarıldı (yeni API anahtarı) | Deney süresini kısaltmak için. Deney tasarımını etkilemez. Veri toplanmadan önce. |
+| 21.11.2026 | Bölüm 4.6 ve 8: Gerekçe ek testinde ve pilot tutarlılık testinde kullanılan sorular ve pilot tutarlılık testinin koşulu açıkça belirtildi | Deney planı kodu yazılırken netleştirildi; seçimler sonuçlardan bağımsızdır. Veri toplanmadan önce. |
