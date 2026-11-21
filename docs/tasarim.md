@@ -337,6 +337,31 @@ Her koşulda **60 soru × 2 tekrar** (bilgi testi ve gerekçe ek testi hariç).
   Gerekçe ek testi. Her parçanın içinde denemelerin sırası rastgele karıştırılır. Kod kaldığı
   yerden devam edebilir.
 
+### 7.1 Çalıştırma kuralları
+
+Bu kurallar deneyin bilimsel tasarımını değiştirmez; verinin nasıl toplandığını belirler.
+
+- **Hız:** Dakikada en fazla 180 istek (anahtarın tavanı 200), aynı anda 8 paralel istek.
+  Sunucu zorlandığında (429 hatası ya da yeniden denemeler) hız otomatik düşer, toparlanınca
+  kademeli olarak geri gelir.
+- **Yeniden deneme:** Teknik hatalar (bağlantı, zaman aşımı, 429, sunucu hatası) aynı çağrıda en
+  fazla 3 kez yeniden denenir (Bölüm 6.1). Yine başarısız olursa satır "teknik hata" olarak
+  kaydedilir ve deneme bir sonraki çalıştırmada tekrar yapılır.
+- **Durdurma:** Çalıştırma aşağıdaki durumlarda kendiliğinden durur. Sorun giderildikten sonra
+  kaldığı yerden devam edilir:
+  - 401 ya da 403 hatası (anahtar sorunu ya da kullanım şartlarının yeniden onaylanması gerekmesi)
+  - 400, 404 ya da 422 hatası (yeniden denemekle düzelmeyecek istek hataları)
+  - art arda 20 teknik hata (sunucu sorunu)
+  - düşünmenin açık olduğunun fark edilmesi (düşünme tokenı ya da düşünme metni)
+  - API'nin döndürdüğü model adının değişmesi (Bölüm 2)
+  - bir çalıştırmada 9 milyon tokena ulaşılması
+- **B düzeneğinde yarım kalan gruplar:** Bir grup, üç modelin aynı çalıştırmada teknik hatasız
+  cevap verdiği durumda tamamlanmış sayılır. Teknik hata ya da durdurma nedeniyle yarım kalan
+  grup bir sonraki çalıştırmada baştan yapılır. Yarım kalan grubun satırları kayıtta kalır,
+  ancak analizde yalnızca tamamlanmış çalıştırmanın satırları kullanılır.
+- **Kayıt dosyaları:** Pilot verisi `veri/ham/pilot.jsonl`, ana deney verisi
+  `veri/ham/ana.jsonl` dosyasına yazılır.
+
 ## 8. Pilot
 
 Pilot verisi ana analize **dahil edilmez.**
@@ -527,3 +552,4 @@ Ana deney ön kayıttan sonra başlar.
 | 20.11.2026 | Bölüm 8: Pilottaki kontrol ön testi 60 sorunun tamamına genişletildi ve soru türü düzeyinde bir karar kuralı eklendi | Düşünme kapalıyken aritmetik sorularının zor gelme ihtimaline karşı. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 7: RPM tavanı 60'tan 200'e çıkarıldı (yeni API anahtarı) | Deney süresini kısaltmak için. Deney tasarımını etkilemez. Veri toplanmadan önce. |
 | 21.11.2026 | Bölüm 4.6 ve 8: Gerekçe ek testinde ve pilot tutarlılık testinde kullanılan sorular ve pilot tutarlılık testinin koşulu açıkça belirtildi | Deney planı kodu yazılırken netleştirildi; seçimler sonuçlardan bağımsızdır. Veri toplanmadan önce. |
+| 21.11.2026 | Bölüm 7.1: Çalıştırma kuralları eklendi (hız, yeniden deneme, durdurma koşulları, B'de yarım kalan grupların işlenmesi, kayıt dosyaları) | Çalıştırıcı yazılırken belirlendi; verinin nasıl toplandığını belgelemek için. Veri toplanmadan önce. |
