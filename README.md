@@ -1,8 +1,9 @@
 # Dil Modeli Ajanlarında Asch Paradigmasıyla Çoğunluk Etkisi
 
-> **Durum:** Ana deney verisi toplandı (21–22 Kasım 2026; `veri/ham/ana.jsonl`, 27.900 çağrı).
-> Analiz henüz yapılmadı. Pilot çalışma: [pilot raporu](docs/pilot_raporu.md). Araştırma tasarımı
-> ve hipotezler veri toplanmadan önce OSF'de ön kayda alınmıştır: https://osf.io/y45rq
+> > **Durum:** Çalışma 1 (ana deney) verisi toplandı (21–22 Kasım 2026; `veri/ham/ana.jsonl`, 27.900 çağrı;
+> ön kayıt: https://osf.io/y45rq). Çalışma 2 (prototip biçimindeki prompt) verisi toplandı (22 Kasım 2026;
+> `veri/ham/calisma2.jsonl`, 1.080 çağrı; ön kayıt: https://osf.io/vreu2). Analiz henüz yapılmadı.
+> Pilot çalışma: [pilot raporu](docs/pilot_raporu.md).
 
 Bu proje, Solomon Asch'ın klasik uyma deneylerini (1951, 1956) büyük dil modellerine uyarlar.
 Temel soru: Bir dil modeli, doğru cevabı bildiği hâlde, yanlış cevap veren bir çoğunluğa uyar mı?
@@ -41,6 +42,7 @@ Tasarımın tamamı (hipotezler, analiz planı, sınırlılıklar): [`docs/tasar
 | `docs/tasarim.md` | Araştırma tasarımı ve hipotezler |
 | `docs/pilot_raporu.md` | Pilot çalışmanın raporu |
 | `docs/guc_simulasyonu.md` | Güç simülasyonu raporu |
+| `docs/calisma2_tasarim.md` | Çalışma 2'nin tasarımı ve hipotezi |
 | `asch/sorular.py` | Soru havuzunun üretilmesi ve doğrulanması |
 | `asch/promptlar.py` | Her deney koşulu için prompt şablonları |
 | `asch/model.py` | EVREN bağlantısı (yeniden deneme ve hata kaydı) |
@@ -49,6 +51,7 @@ Tasarımın tamamı (hipotezler, analiz planı, sınırlılıklar): [`docs/tasar
 | `asch/plan.py` | Deney planı: bütün denemeler (27.900 ana, 510 pilot çağrısı) |
 | `asch/calistir.py` | Çalıştırıcı: hız sınırı, B grupları, durdurma kuralları, kaldığı yerden devam |
 | `asch/baglanti_testi.py` | EVREN bağlantı testi |
+| `asch/calisma2.py` | Çalışma 2: prototip biçimindeki prompt, serbest metin cevap ayrıştırma |
 | `veri/sorular.json` | Deneyde kullanılan 60 soru |
 | `veri/ham/` | Ham veri (her API çağrısı bir satır, JSONL) |
 | `analiz/pilot_analizi.py` | Pilot raporundaki sayıları üreten analiz |
@@ -81,6 +84,8 @@ python -m asch.calistir pilot     # Pilot çalışma (510 çağrı)
 python -m analiz.pilot_analizi    # Pilot raporundaki sayıları üretir 
 Rscript analiz/guc_simulasyonu.R  # Güç simülasyonu (~2,5 saat)
 python -m asch.calistir ana       # Ana deney (kaldığı yerden devam eder)
+python -m asch.calisma2 --kuru    # Çalışma 2: API'ye gitmeden yapılacakları gösterir
+python -m asch.calisma2           # Çalışma 2 (1.080 çağrı, kaldığı yerden devam eder)
 ```
 
 ## Prototip
