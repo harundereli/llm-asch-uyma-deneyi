@@ -1,6 +1,6 @@
 # Dil Modeli Ajanlarında Asch Paradigmasıyla Çoğunluk Etkisi
 
-> > **Durum:** Çalışma 1 (ana deney) verisi toplandı (21–22 Kasım 2026; `veri/ham/ana.jsonl`, 27.900 çağrı;
+>  **Durum:** Çalışma 1 (ana deney) verisi toplandı (21–22 Kasım 2026; `veri/ham/ana.jsonl`, 27.900 çağrı;
 > ön kayıt: https://osf.io/y45rq). Çalışma 2 (prototip biçimindeki prompt) verisi toplandı (22 Kasım 2026;
 > `veri/ham/calisma2.jsonl`, 1.080 çağrı; ön kayıt: https://osf.io/vreu2). Analiz henüz yapılmadı.
 > Pilot çalışma: [pilot raporu](docs/pilot_raporu.md).
