@@ -1,8 +1,8 @@
 # Dil Modeli Ajanlarında Asch Paradigmasıyla Çoğunluk Etkisi
 
-> **Durum:** Altyapı tamamlandı ve otomatik testlerle doğrulandı. Pilot çalışma tamamlandı
-> ([pilot raporu](docs/pilot_raporu.md)); henüz ana veri toplanmadı. Araştırma tasarımı ve
-> hipotezler veri toplanmadan önce OSF'de ön kayda alınmıştır: https://osf.io/y45rq
+> **Durum:** Ana deney verisi toplandı (21–22 Kasım 2026; `veri/ham/ana.jsonl`, 27.900 çağrı).
+> Analiz henüz yapılmadı. Pilot çalışma: [pilot raporu](docs/pilot_raporu.md). Araştırma tasarımı
+> ve hipotezler veri toplanmadan önce OSF'de ön kayda alınmıştır: https://osf.io/y45rq
 
 Bu proje, Solomon Asch'ın klasik uyma deneylerini (1951, 1956) büyük dil modellerine uyarlar.
 Temel soru: Bir dil modeli, doğru cevabı bildiği hâlde, yanlış cevap veren bir çoğunluğa uyar mı?
